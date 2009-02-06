@@ -1,0 +1,24 @@
+0.3
+  - Added favicon
+  - Changed readme.txt: ufw2web is dependent from python-cherrypy3 and
+    not python-cherrypy (actually: version 2.x)
+  - Added extra config parameter: 'server.socket_host':'0.0.0.0'
+    In some cases, the server was not reachable from the outside
+  - Simplified status checking: see if 'not loaded' is in the return string
+    This was needed to obtain compatability with Hardy, which is using on older
+    version of ufw. Status returned by Hardy was 'Firewall not loaded' instead 
+    of 'Status: not loaded' in Intrepid and higher.
+  - ConfigFolder is now based defined as an absolute path to provide startup
+    in an init-system
+
+0.2 
+  - Added authentication, default admin/admin
+    - highly configurable, see config/ufw2web.conf for details
+  - Changed structure of ufw2web.conf, not containing directory configuration anymore
+    - refacored (reading of) settings
+  - Autoredirect to main page for result pages (removed OK button)
+  - Moved all config files to ./config (including translations)
+  - Reading config files is more robust when keys do not exist
+  - Use string formatting (code refactoring)
+
+0.1 First public version
