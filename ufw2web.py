@@ -21,7 +21,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-import cherrypy  # From package python-cherrypy
+import cherrypy  # From package python-cherrypy3
 import subprocess
 from string import *
 import os.path
